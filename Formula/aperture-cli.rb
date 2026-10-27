@@ -5,21 +5,21 @@
 class ApertureCli < Formula
   desc "Agentic coding launcher for Aperture by Tailscale"
   homepage "https://github.com/tailscale/aperture-cli"
-  version "0.1.1"
+  version "0.1.2"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tailscale/aperture-cli/releases/download/v0.1.1/aperture-cli_darwin_amd64.tar.gz"
-      sha256 "1f74cdca6e24db143d99ea5843d999deb6f97dbc71eea27da654c315757e8570"
+      url "https://github.com/tailscale/aperture-cli/releases/download/v0.1.2/aperture-cli_darwin_amd64.tar.gz"
+      sha256 "89e948b6af5bb228dcbb70a06f79c6b218fe67833b71e3abf1c818fdbcfee6dd"
 
       define_method(:install) do
         bin.install "aperture"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tailscale/aperture-cli/releases/download/v0.1.1/aperture-cli_darwin_arm64.tar.gz"
-      sha256 "17b48d0cb17aae1f647609deceb2758a796d2404b89eadd87d8d79d0d7c1c512"
+      url "https://github.com/tailscale/aperture-cli/releases/download/v0.1.2/aperture-cli_darwin_arm64.tar.gz"
+      sha256 "a5a4188015271a5b27d64a7984d0037eb908dc51d524b0af24246b8c231f083f"
 
       define_method(:install) do
         bin.install "aperture"
@@ -29,15 +29,15 @@ class ApertureCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tailscale/aperture-cli/releases/download/v0.1.1/aperture-cli_linux_amd64.tar.gz"
-      sha256 "50eb7b04db71ef63beb2566f5d104c9c313b6a4104a03b898b1c975f40420a35"
+      url "https://github.com/tailscale/aperture-cli/releases/download/v0.1.2/aperture-cli_linux_amd64.tar.gz"
+      sha256 "84f5f012fdf8180811a08e034c368012f4ef95bec464574741d64274d16e952d"
       define_method(:install) do
         bin.install "aperture"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tailscale/aperture-cli/releases/download/v0.1.1/aperture-cli_linux_arm64.tar.gz"
-      sha256 "3a86c7a1429738d6316ab2143fd13512a56ba9922afd917509a04c62dbf4ee62"
+      url "https://github.com/tailscale/aperture-cli/releases/download/v0.1.2/aperture-cli_linux_arm64.tar.gz"
+      sha256 "0fec1af231b23273b00347158aecab2f0bfe909d0568a91c12fc3c2d474e052f"
       define_method(:install) do
         bin.install "aperture"
       end
